@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        int N = 12;  // Asignamos el valor de N directamente a 12
+
+        int sumaTotal = 0; // La suma total de numeros es 0, por ahora.
+
+        // Recorremos todos los números desde 1 hasta N
+        for (int i = 1; i <= N; i++) {
+            int numero = i;
+
+            // Sumar los dígitos del número actual
+            while (numero > 0) {
+                sumaTotal += numero % 10;  // Obtiene el último dígito
+                numero /= 10;  // Elimina el último dígito
+            }
+        }
+
+        // Mostramos la suma total de los dígitos
+        System.out.println("La suma de los dígitos de 1 a " + N + " es: " + sumaTotal);
+    }
+}
